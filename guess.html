@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>THE NUMBER GUESSING GAME</title>
+
+    <style>
+        html {
+            font-family: Poppins;
+        }
+
+        body {
+            background-image: url("https://wallpapercave.com/wp/wp1843999.jpg");
+
+        }
+
+        .all {
+            color: aliceblue;
+            margin-left: 700px;
+            margin-top: 100px
+        }
+    </style>
+</head>
+
+<body >
+    <div class="all">
+        <h1>Guess The Number</h1>
+        <p>Enter a number between 1-10 in the box below. GOOD LUCK</p>
+        <input type="text" id="guess">
+        <button id="submit"> Submit</button>
+    </div>
+    <script>
+        var a = Math.floor(Math.random() * 10 + 1);
+        document.getElementById("submit").onclick = function () {
+            var b = document.getElementById("guess").value;
+            if (b == a) {
+                alert("CONGRATULATIONS! YOU WON ");
+            }
+            else if (b > a) {
+                alert("THE CORRECT NUMBER IS SMALLER. TRY AGAIN");
+            }
+            else {
+                alert("THE CORRECT NUMBER IS GREATER. TRY AGAIN")
+            }
+        }
+    </script>
+</body>
+
+</html>
